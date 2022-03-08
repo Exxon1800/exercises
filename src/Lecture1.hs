@@ -21,7 +21,6 @@ perfect. You can return to these exercises after future lectures and
 improve your solutions if you see any possible improvements.
 -}
 {-# OPTIONS_GHC -Wno-type-defaults #-}
-{-# OPTIONS_GHC -Wno-name-shadowing #-}
 
 module Lecture1
     ( makeSnippet
