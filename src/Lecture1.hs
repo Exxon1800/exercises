@@ -20,7 +20,6 @@ It's absolutely okay if you feel that your implementations are not
 perfect. You can return to these exercises after future lectures and
 improve your solutions if you see any possible improvements.
 -}
-{-# OPTIONS_GHC -Wno-type-defaults #-}
 
 module Lecture1
     ( makeSnippet
