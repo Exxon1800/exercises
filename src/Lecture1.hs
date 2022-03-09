@@ -58,7 +58,7 @@ is 25.
 -- DON'T FORGET TO SPECIFY THE TYPE IN HERE
 
 sumOfSquares :: Integer -> Integer -> Integer
-sumOfSquares x y = (x^2) + (y^2)
+sumOfSquares x y = x * x + y * y
 
 {- | Implement a function that returns the last digit of a given number.
 
