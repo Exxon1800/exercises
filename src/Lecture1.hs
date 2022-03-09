@@ -116,7 +116,7 @@ subString :: Int -> Int -> String -> String
 subString start end str = take (end - negToZero start + 1) (drop start str)
     where 
         negToZero :: Int -> Int
-        negToZero x = if x < 0 then 0 else x
+        negToZero x = max 0 x
 
 {- | Write a function that takes a String — space separated numbers,
 and finds a sum of the numbers inside this string.
