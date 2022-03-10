@@ -124,10 +124,7 @@ The string contains only spaces and/or numbers.
 -}
 
 strSum :: String -> Int
-strSum str = sum(stringToInt(words str))
-    where
-        stringToInt :: [String] -> [Int]
-        stringToInt = map read
+strSum str = sum(map read (words str))
 
 {- | Write a function that takes a number and a list of numbers and
 returns a string, saying how many elements of the list are strictly
