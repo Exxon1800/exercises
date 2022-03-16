@@ -84,7 +84,7 @@ removeAt :: Int -> [a] -> (Maybe a ,  [a])
 removeAt _ [] = (Nothing, [])
 removeAt el (x:xs)
   | el < 0    = (Nothing, x : xs)
-  | otherwise = (dataAt el (x: xs), deleteN el (x : xs))
+  | otherwise = (getN el (x: xs), deleteN el (x : xs))
 
 deleteN :: Int -> [a] -> [a]
 deleteN _ [] = []
@@ -92,10 +92,11 @@ deleteN i (x:xs)
    | i == 0    = xs
    | otherwise = x : deleteN (i-1) xs
 
-dataAt :: Int -> [a] -> Maybe a
-dataAt _ [] = Nothing
-dataAt y (x:xs)  | y <= 0 = Just x
-                 | otherwise = dataAt (y-1) xs
+getN :: Int -> [a] -> Maybe a
+getN _ [] = Nothing
+getN i (x:xs)  
+  | i <= 0 = Just x
+  | otherwise = getN (i-1) xs
 
 {- | Write a function that takes a list of lists and returns only
 lists of even lengths.
