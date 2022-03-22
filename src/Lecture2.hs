@@ -134,7 +134,16 @@ spaces.
 
 🕯 HINT: look into Data.Char and Prelude modules for functions you may use.
 -}
-dropSpaces = error "TODO"
+
+dropSpaces :: String -> String 
+dropSpaces str = go str ""
+  where
+    go ::String -> String -> String
+    go "" "" = ""
+    go "" s = s
+    go (x:xs) s
+      | x == ' ' = go xs s
+      | otherwise = go xs (s ++ [x]) 
 
 {- |
 
