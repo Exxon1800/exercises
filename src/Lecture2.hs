@@ -94,7 +94,7 @@ deleteN i (x:xs)
 
 getN :: Int -> [a] -> Maybe a
 getN _ [] = Nothing
-getN i (x:xs)  
+getN i (x:xs)
   | i <= 0 = Just x
   | otherwise = getN (i-1) xs
 
