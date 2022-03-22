@@ -147,7 +147,6 @@ dropSpaces str = go str ""
       | null xs && s /= [] = s ++ [x]
       | otherwise = go xs (s ++ [x])
 
-
 {- |
 
 The next task requires to create several data types and functions to
