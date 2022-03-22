@@ -113,7 +113,7 @@ evenLists list = go list []
     go ::[String] -> [String] -> [String]
     go [] [] = []
     go [] l = l
-    go  (x:xs) l
+    go (x:xs) l
       | listcounteven x = go xs (l ++ [x])
       | otherwise = go xs l
 
