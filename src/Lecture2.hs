@@ -135,15 +135,18 @@ spaces.
 🕯 HINT: look into Data.Char and Prelude modules for functions you may use.
 -}
 
-dropSpaces :: String -> String 
+dropSpaces :: String -> String
 dropSpaces str = go str ""
   where
     go ::String -> String -> String
     go "" "" = ""
-    go "" s = s
+    go [] (_:_) = ""
     go (x:xs) s
+      | x == ' ' && s /= [] = s
       | x == ' ' = go xs s
-      | otherwise = go xs (s ++ [x]) 
+      | null xs && s /= [] = s ++ [x]
+      | otherwise = go xs (s ++ [x])
+
 
 {- |
 
