@@ -107,18 +107,9 @@ lists of even lengths.
 ♫ NOTE: Use eta-reduction and function composition (the dot (.) operator)
   in this function.
 -}
-evenLists :: [String] -> [String]
-evenLists list = go list []
-  where
-    go ::[String] -> [String] -> [String]
-    go [] [] = []
-    go [] l = l
-    go (x:xs) l
-      | listcounteven x = go xs (l ++ [x])
-      | otherwise = go xs l
 
-listcounteven :: String -> Bool
-listcounteven = even . length
+evenLists :: [String] -> [String]
+evenLists = take 3 . filter (even . length) 
 
 {- | The @dropSpaces@ function takes a string containing a single word
 or number surrounded by spaces and removes all leading and trailing
