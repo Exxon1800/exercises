@@ -109,7 +109,7 @@ lists of even lengths.
 -}
 
 evenLists :: [String] -> [String]
-evenLists = take 3 . filter (even . length) 
+evenLists = filter (even . length)
 
 {- | The @dropSpaces@ function takes a string containing a single word
 or number surrounded by spaces and removes all leading and trailing
